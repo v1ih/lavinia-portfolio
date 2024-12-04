@@ -1,0 +1,268 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+font-family: 'Arial', sans-serif;
+background-color: #f9f9f9;
+color: #333;
+}
+
+
+/* Animações */
+@keyframes typing { 
+    from { 
+        width: 0; 
+    } 
+}
+
+@keyframes blink-caret {  
+    50% { 
+        border-color: transparent; 
+    } 
+}
+
+/* Estilos para o título */
+h1 {
+    font: bold 300% Consolas, Monaco, monospace; /* Definindo a fonte */
+    border-right: .1em solid black; /* Efeito de cursor */
+    width: 21ch; /* Limita a largura com base no número de caracteres */
+    margin: 2em auto; /* Centraliza com margens automáticas */
+    text-align: center; /* Garante que o texto dentro do h1 seja centralizado */
+    white-space: nowrap; /* Impede a quebra de linha no texto */
+    overflow: hidden; /* Garante que o texto não ultrapasse a largura */
+    
+    /* Adiciona animações de digitação e blink-caret */
+    -webkit-animation: typing 2s steps(21, end), 
+                       blink-caret .5s step-end infinite alternate;
+    animation: typing 2s steps(21, end), 
+              blink-caret .5s step-end infinite alternate;
+}
+
+/* Container geral */
+.container {
+width: 90%;
+margin: 0 auto;
+max-width: 1200px;
+}
+
+/* Cabeçalho */
+header {
+    background: #5F4B8B; /* Roxo */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    
+    /* Centralização com Flexbox */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+header h1 {
+font-size: 3.5em;
+margin-bottom: 20px;
+}
+
+header p {
+font-size: 1.5em;
+margin-bottom: 20px;
+}
+
+.cta-button {
+background: #6a4c9c; /* Roxo mais claro */
+color: #fff;
+padding: 12px 24px;
+text-decoration: none;
+border-radius: 5px;
+font-size: 1.2em;
+transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+background-color: #4e3570; /* Roxo mais escuro */
+color: #ffca28;
+}
+
+/* Container dos ícones */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Estilo dos ícones */
+.social-icon {
+color: #fff;
+font-size: 1.5em;
+text-decoration: none;
+padding: 10px;
+transition: all 0.3s ease;
+}
+
+.social-icon i {
+margin-right: 8px;
+}
+
+.social-icon:hover {
+color: #ffca28; /* Cor de hover suave, pode ser um tom dourado ou algo mais contrastante */
+transform: scale(1.1);
+}
+
+.social-icon:active {
+transform: scale(0.9); /* Dá um efeito de "pressionar" no ícone */
+}
+
+
+/* Seção Sobre */
+section {
+padding: 60px 0;
+background: #fff;
+}
+
+section h2 {
+text-align: center;
+font-size: 2.5em;
+margin-bottom: 30px;
+color: #5F4B8B; /* Roxo */
+}
+
+.skills {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+.skill, .skill-html, .skill-css, .skill-js, .skill-react, .skill-php, .skill-laravel {
+background: #6a4c9c; /* Roxo claro */
+color: #fff;
+padding: 12px 25px;
+margin: 12px;
+border-radius: 8px;
+font-size: 1.2em;
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill:hover, .skill-html:hover, .skill-css:hover, .skill-js:hover, .skill-react:hover, .skill-php:hover, .skill-laravel:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    /* background: #5F4B8B; */
+}
+
+.skill:hover {
+    cursor: pointer;
+    background-color: #8467c1;
+}
+
+.skill-html:hover {
+    background-color: #F56B00;
+}
+
+.skill-css:hover {
+    background-color: #2965F1;
+}
+
+.skill-js:hover {
+    background-color: #F7DF1E;
+    color: #333;
+}
+
+.skill-react:hover {
+    background-color: #61DAFB;
+    color: #333;
+}
+
+.skill-php:hover {
+    background-color: #8A2BE2;
+}
+
+.skill-laravel:hover {
+    background-color: #F56B00;
+}
+
+/* Seção Projetos */
+.projects {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 20px;
+}
+
+.project-card {
+background: #f4f4f4;
+padding: 20px;
+margin: 10px;
+width: 45%;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+width: 100%;
+height: auto;
+border-radius: 8px;
+margin-bottom: 15px;
+}
+
+.project-card h3 {
+margin-bottom: 15px;
+font-size: 1.8em;
+color: #5F4B8B; /* Roxo */
+}
+
+.project-card p {
+font-size: 1.1em;
+margin-bottom: 15px;
+}
+
+.project-card a {
+color: #6a4c9c; /* Roxo claro */
+font-weight: bold;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+color: #5F4B8B; /* Roxo escuro */
+}
+
+/* Seção Contato */
+section a {
+color: #5F4B8B;
+}
+
+footer {
+background: #5F4B8B; /* Roxo */
+color: #fff;
+text-align: center;
+padding: 20px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+}
